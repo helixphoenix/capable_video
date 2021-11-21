@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+  <table id="data" class="table table striped" >
+    <thead>
+      <tr>
+        <th>video name</th>
+        <th>width</th>
+        <th>height</th>
+        <th>resolution</th>
+        <th>frame rate</th>
+        <th>number of frames</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for video in videos %}
+          <tr>
+              <td>{{ video.name}}</td>
+              <td>{{video.width}}</td>
+              <td>{{video.height}}</td>
+              <td>{{video.resolution}}</td>
+              <td>{{video.frame_rate}}</td>
+              <td>{{video.number_of_frames}}</td>
+          </tr>
+        {% endfor %}  
+    </tbody>
+  </table>  
+{% endblock %}    
